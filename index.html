@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .marquee-wrapper {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .marquee-content {
+      display: flex;
+      white-space: nowrap;
+      animation: scroll-marquee 5s linear infinite;
+    }
+
+    @keyframes scroll-marquee {
+      from {
+        transform: translateX(0%);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+</head>
+<body class="overflow-x-hidden">
+  <div class="w-full  font-['Helvetica']">
+    <nav class="fixed top-0 left-0 w-full py-10 px-24 flex justify-between items-center">
+      <h2 class="text-xl tracking-tighter">Deweb 🐳</h2>
+      <div class="flex gap-10 items-center">
+        <a href="#" class="flex items-center">Home</a>
+        <a href="#" class="flex items-center">About</a>
+        <a href="#" class="relative w-40 h-10 rounded-full overflow-hidden bg-gradient-to-r from-pink-100 to-purple-100 flex items-center justify-center">
+          <div class="marquee-wrapper">
+            <div class="marquee-content text-black font-medium px-4">
+              <span class="mr-10">Services</span>
+              <span class="mr-10">Services</span>
+              <span class="mr-10">Services</span>
+              <span class="mr-10">Services</span>
+              <span class="mr-10">Services</span>
+              <span class="mr-10">Services</span>
+              <!-- Duplicate the same content for seamless loop -->
+              <span class="mr-10">Services</span>
+              <span class="mr-10">Services</span>
+              <span class="mr-10">Services</span>
+              <span class="mr-10">Services</span>
+              <span class="mr-10">Services</span>
+              <span class="mr-10">Services</span>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="flex items-center">Contact</a>
+      </div>
+    </nav>
+
+    <div class="landing w-full h-[200vh]">
+      <div class="w-full h-screen sticky top-0 left-0  ">
+
+          <h1 class=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap text-8xl font-bold tracking-tighter">Design . Develop . Branding</h1>
+          <p class=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 pointer-events-none text-2xl text-center tracking-tighter leading-loose">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Aliquam debitis pariatur hic expedita quo id, reprehenderit perspiciatis libero enim, modi corporis explicabo ducimus
+             error quidem nisi nesciunt? Voluptate expedita hic quos non placeat deserunt ad. Animi facere commodi ab ipsam
+              reprehenderit modi.</p>
+       
+        <canvas class="pointer-events-none z-[-1]" id="canvas"></canvas>
+    
+      </div>
+        </div>
+    <div class="w-full h-screen bg-white">
+      <h1 class="text-8xl text-center font-bold tracking-tighter">You  🫵 know the business and <br> i know 🤌 the chemistry🧪 </h1>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
